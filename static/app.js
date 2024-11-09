@@ -40,13 +40,13 @@ function getStory() {
 }
 
 // Function to call the OpenAI API via your Flask backend
-function store_basic_info(firstName, lastName, gender, email, age) {
+function store_basic_info(firstName, lastName, gender, age, country) {
     fetch('http://127.0.0.1:5000/api/add_basic_info', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ firstName, lastName, gender, email, age })
+        body: JSON.stringify({ firstName, lastName, gender, age , country})
     })
     .then(response => response.json())
     .then(data => {
@@ -61,7 +61,7 @@ function store_basic_info(firstName, lastName, gender, email, age) {
 
 // Ensure the DOM is fully loaded before adding the event listener
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Loaded page");
+    // console.log("Loaded page");
 
     document.getElementById('BasicInfo').addEventListener('submit', function(event){
         event.preventDefault();
@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstName = document.getElementById('firstName').value;
         const lastName = document.getElementById('lastName').value;
         const gender = document.getElementById("gender").value;
-        const email = document.getElementById('country').value;
-        const age = document.getElementById('age').value;
-        store_basic_info(firstName, lastName, gender, email, age);
+        const age = document.getElementById("age").value;
+        const country = document.getElementById("country").value;
+        store_basic_info(firstName, lastName, gender, age, country);
     });
 
 
     // Event listener for form submission for Query Form
     document.getElementById('queryForm').addEventListener('submit', function(event) {
-        console.log("submit pressed");
+        // console.log("submit pressed");
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Get the value of the input field
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     document.getElementById('storyForm').addEventListener('submit', function(event) {
-        console.log("submit pressed");
+        // console.log("submit pressed");
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Call the function to send the request

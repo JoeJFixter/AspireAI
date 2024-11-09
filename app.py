@@ -20,7 +20,7 @@ client = Swarm()
 
 def chatbot_instructions(context_variables):
    previous_conversation = context_variables["previous_conversation"]
-   prompt = f"You have been having a conversation with a user. You are an agent whose job it is to understand the long-term goals of the user. You are to collect information and ask follow up questions to get a good understanding of the user's goals. This is what you have said so far: {previous_conversation}"
+   prompt = f"You have been having a conversation with a user. You are an agent whose job it is to understand the long-term goals of the user. You are to collect information and ask follow up questions to get a good understanding of the user's goals. This is what you have said so far: {previous_conversation}. Do not try to give advice on how they could achieve these goals. You should only be collecting information from the user on their goals. Keep responses short, but collected as much relevant information as possible. You will be having a lengthy conversation with the user, so you can collect this information over multiple prompts"
    return prompt
 
 chatbot_agent = Agent(
@@ -34,8 +34,8 @@ def story_instructions(context_variables):
     last_name = context_variables["last_name"]
     gender = context_variables["gender"]
     age = context_variables["age"]
-    prompt = f"You have had a conversation with the user discussing their goals and asperations your job is to now create a story of how the users life would look like in the future if they achieved these goals. This is the conversation you have had: {previous_conversation} The user's first name is {first_name}, last name is {last_name} the users gender is {gender} and they are currently {age} years old. Include this information in the story. Do not talk about anyone else. Do not hallucinate."
-    # prompt = "Write response in spanish"
+    country = context_variables["country"]
+    prompt = f"You have had a conversation with the user discussing their goals and aspirations your job is to now create a story of how the users life would look like in the future if they achieved these goals. Do not talk about the present. Assume they are older than they are now, and they have achieved their goals, living their dream life. This is the conversation you have had: {previous_conversation} The user's first name is {first_name}, last name is {last_name} the users gender is {gender} and they are currently {age} years old. Include this information in the story. Do not talk about anyone else. Do not hallucinate."
     return prompt
 
 
@@ -50,6 +50,7 @@ first_name = ""
 last_name = ""
 gender = ""
 age = ""
+country = ""
 
 
 def previous_conversation_to_string():
@@ -101,7 +102,7 @@ def call_story_agent_api():
         response = client.run(
             agent=story_agent,
             messages=[{"role": "user", "content": "Make me a story given the information I have provided. Do not ask for any more information."}],
-            context_variables={"previous_conversation": previous_conversation_to_string(), "first_name": first_name, "last_name": last_name, "gender":gender, "age": age}
+            context_variables={"previous_conversation": previous_conversation_to_string(), "first_name": first_name, "last_name": last_name, "gender":gender, "age": age, "country": country}
         )
 
         result_text = response.messages[-1]["content"]
@@ -115,14 +116,14 @@ def call_story_agent_api():
 
 @app.route('/api/add_basic_info', methods=['POST'])
 def add_basic_info():
-    global first_name, last_name, gender, age
+    global first_name, last_name, gender, age, country
     first_name = request.json.get('firstName', '')
     last_name = request.json.get('lastName', '')
     gender = request.json.get('gender', '')
     age = request.json.get('age', '')
+    country = request.json.get('country', '')
 
-    print(first_name, last_name, gender, age)
-    print("Helloooo")
+    print(first_name, last_name, gender, age, country)
 
     # You can now use these variables as needed
     return jsonify({"status": "success", "message": "Basic info received"})
