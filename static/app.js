@@ -1,11 +1,32 @@
 // Function to call the OpenAI API via your Flask backend
 function getOpenAIResponse(userInput) {
-    fetch('http://127.0.0.1:5000/api/openai_api', {
+    fetch('http://127.0.0.1:5000/api/chatbot_agent_api', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ input: userInput })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            console.log('OpenAI response:', data.response);
+        } else {
+            console.error('Error from OpenAI API:', data.message);
+        }
+    })
+    .catch(error => console.error('Error calling backend:', error));
+}
+
+
+// Function to call the OpenAI API via your Flask backend
+function getStory() {
+    fetch('http://127.0.0.1:5000/api/story_agent_api', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({})
     })
     .then(response => response.json())
     .then(data => {
@@ -31,5 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('User input:', userInput);
         // Call the function to send the request
         getOpenAIResponse(userInput);
+    });
+
+
+    document.getElementById('storyForm').addEventListener('submit', function(event) {
+        console.log("submit pressed");
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Call the function to send the request
+        getStory();
     });
 });
