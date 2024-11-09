@@ -31,7 +31,8 @@ def register_user():
         return jsonify({'error': str(e)}), 400
 
 
-
+def get_chat_history(chat_id):
+    
 
 
 def new_id():
