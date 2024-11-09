@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Query Form</title>
+    
+</head>
+<body>
+    <h1>Ask OpenAI a Question</h1>
+    
+    <!-- Form to take user input -->
+    <form id="queryForm">
+        <label for="userInput">Your Query:</label>
+        <input type="text" id="userInput" name="userInput" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <!-- Display the response from OpenAI -->
+    <div id="responseOutput"></div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
