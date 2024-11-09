@@ -29,9 +29,14 @@ chatbot_agent = Agent(
 )
 
 def story_instructions(context_variables):
-   previous_conversation = context_variables["previous_conversation"]
-   prompt = f"You have had a converstion with the user discussing their goals and asperations your job is to now create a story of how they could achieve said goals and what their life would look like. This is the conversation you have had: {previous_conversation}"
-   return prompt
+    previous_conversation = context_variables["previous_conversation"]
+    first_name = context_variables["first_name"]
+    last_name = context_variables["last_name"]
+    gender = context_variables["gender"]
+    age = context_variables["age"]
+    prompt = f"You have had a conversation with the user discussing their goals and asperations your job is to now create a story of how the users life would look like in the future if they achieved these goals. This is the conversation you have had: {previous_conversation} The user's first name is {first_name}, last name is {last_name} the users gender is {gender} and they are currently {age} years old. Include this information in the story. Do not talk about anyone else. Do not hallucinate."
+    # prompt = "Write response in spanish"
+    return prompt
 
 
 story_agent = Agent(
@@ -40,6 +45,11 @@ story_agent = Agent(
 )
 
 previous_conversation = []
+
+first_name = ""
+last_name = ""
+gender = ""
+age = ""
 
 
 def previous_conversation_to_string():
@@ -89,11 +99,10 @@ def call_story_agent_api():
     # Make a call to the OpenAI API
     try:
         response = client.run(
-            agent=chatbot_agent,
-            messages=[{"role": "user", "content": "Make me a story"}],
-            context_variables={"previous_conversation": previous_conversation_to_string()}
+            agent=story_agent,
+            messages=[{"role": "user", "content": "Make me a story given the information I have provided. Do not ask for any more information."}],
+            context_variables={"previous_conversation": previous_conversation_to_string(), "first_name": first_name, "last_name": last_name, "gender":gender, "age": age}
         )
-
 
         result_text = response.messages[-1]["content"]
      
@@ -104,7 +113,19 @@ def call_story_agent_api():
 
 
 
+@app.route('/api/add_basic_info', methods=['POST'])
+def add_basic_info():
+    global first_name, last_name, gender, age
+    first_name = request.json.get('firstName', '')
+    last_name = request.json.get('lastName', '')
+    gender = request.json.get('gender', '')
+    age = request.json.get('age', '')
 
+    print(first_name, last_name, gender, age)
+    print("Helloooo")
+
+    # You can now use these variables as needed
+    return jsonify({"status": "success", "message": "Basic info received"})
 
 
 
