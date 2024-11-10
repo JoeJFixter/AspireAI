@@ -48,13 +48,14 @@ def callback():
 
 @app.route("/logout")
 def logout():
+    print ("logout")
     session.clear()
     return redirect(
         "https://" + env.get("AUTH0_DOMAIN")
         + "/v2/logout?"
         + urlencode(
             {
-                "returnTo": url_for("home", _external=True),
+                "returnTo": url_for("dashboard", _external=True),
                 "client_id": env.get("AUTH0_CLIENT_ID"),
             },
             quote_via=quote_plus,
@@ -65,7 +66,7 @@ def logout():
 def dashboard():
     if "user" not in session:
         print("user not in session")
-        return redirect(url_for("index.html"))
+        return redirect(url_for("index"))
     return render_template("home.html", session=session.get('user'), pretty=json.dumps(session.get('user'), indent=4))
 
 
@@ -118,7 +119,7 @@ def index():
 
 def chatbot_instructions(context_variables):
    previous_conversation = context_variables["previous_conversation"]
-   prompt = f"You have been having a conversation with a user. You are an agent whose job it is to understand the long-term goals of the user. You are to collect information and ask follow up questions to get a good understanding of the user's goals. This is what you have said so far: {previous_conversation}. Do not try to give advice on how they could achieve these goals. You should only be collecting information from the user on their goals. Keep responses short, but collected as much relevant information as possible. You will be having a lengthy conversation with the user, so you can collect this information over multiple prompts"
+   prompt = f"You have been having a conversation with a user. You are an agent whose job it is to understand the long-term goals of the user. You are to collect information and ask follow up questions to get a good understanding of the user's goals. This is what you have said so far: {previous_conversation}. Do not try to give advice on how they could achieve these goals. You should only be collecting information from the user on their goals. Keep responses short, but collected as much relevant information as possible. You will be having a lengthy conversation with the user, so you can collect this information over multiple prompts. Also try to subtly ask the user about their name, age and similar personal details you might need to know to help them better."
    return prompt
 
 chatbot_agent = Agent(
@@ -158,14 +159,14 @@ def call_chatbot_agent_api():
 
 def story_instructions(context_variables):
     previous_conversation = context_variables["previous_conversation"]
-    first_name = context_variables["first_name"]
-    last_name = context_variables["last_name"]
-    gender = context_variables["gender"]
-    age = context_variables["age"]
-    country = context_variables["country"]
-    occupation = context_variables["occupation"]
-    employmentType = context_variables["employmentType"]
-    prompt = f"You have had a conversation with the user discussing their goals and aspirations your job is to now create a story of how the users life would look like in the future if they achieved these goals. Do not talk about the present. Assume they are older than they are now, and they have achieved their goals, living their dream life. This is the conversation you have had: {previous_conversation} The user's first name is {first_name}, last name is {last_name} the users gender is {gender} and they are currently {age} years old and live in {country}. They work as {occupation} and are contracted to {employmentType} hours. Include this information in the story. Do not talk about anyone else. Do not hallucinate."
+    # first_name = context_variables["first_name"]
+    # last_name = context_variables["last_name"]
+    # gender = context_variables["gender"]
+    # age = context_variables["age"]
+    # country = context_variables["country"]
+    # occupation = context_variables["occupation"]
+    # employmentType = context_variables["employmentType"]
+    prompt = f"You have had a conversation with the user discussing their goals and aspirations your job is to now create a story of how the users life would look like in the future if they achieved these goals. Do not talk about the present. Assume they are older than they are now, and they have achieved their goals, living their dream life. This is the conversation you have had: {previous_conversation}. Include this information in the story. Do not talk about anyone else. Do not make up fake names that the user has not specified in the previous conversation. Do not hallucinate."
     return prompt
 
 
@@ -221,15 +222,15 @@ def add_basic_info():
 # ======= Generate tasks for the user =======
 def task_instructions(context_variables):
     previous_conversation = context_variables["previous_conversation"]
-    first_name = context_variables["first_name"]
-    last_name = context_variables["last_name"]
-    gender = context_variables["gender"]
-    age = context_variables["age"]
-    country = context_variables["country"]
-    story_text = context_variables["story_text"]
-    occupation = context_variables["occupation"]
-    employmentType = context_variables["employmentType"]
-    prompt = f"You have been having a conversation with a user. You have been gathering information about the user's goals and aspirations and have created a story of how the users life would look like in the future if they achieved these goals. Your job now is to create a weekly schedule of tasks distrubited throught uniformly throughout the week so that the user can do to achieve these goals. You should create a schedule of tasks that are specific, actionable, and achievable. You should also include a time block for each task across one week. Output this in JSON format for it to be used in google calander API. The format for each event should be {json_format}. Do not add any other text except the JSON. This response needs to be able to be parsed by an API later. This is the conversation you have had: {previous_conversation} The user's first name is {first_name}, last name is {last_name} the users gender is {gender} and they are currently {age} years old. The user lives in {country} and works as {occupation} on a {employmentType} contract. The story you created is: {story_text}. Do not ask for any more information. You should only be creating a list of tasks that the user can do to achieve their goals."
+    # first_name = context_variables["first_name"]
+    # last_name = context_variables["last_name"]
+    # gender = context_variables["gender"]
+    # age = context_variables["age"]
+    # country = context_variables["country"]
+    # story_text = context_variables["story_text"]
+    # occupation = context_variables["occupation"]
+    # employmentType = context_variables["employmentType"]
+    prompt = f"You have been having a conversation with a user. You have been gathering information about the user's goals and aspirations and have created a story of how the users life would look like in the future if they achieved these goals. Your job now is to create a weekly schedule of tasks distrubited throught uniformly throughout the week so that the user can do to achieve these goals. You should create a schedule of tasks that are specific, actionable, and achievable. You should also include a time block for each task across one week. Output this in JSON format for it to be used in google calander API. The format for each event should be {json_format}. Do not add any other text except the JSON. This response needs to be able to be parsed by an API later. This is the conversation you have had: {previous_conversation}. The story you created is: {story_text}. Do not ask for any more information. You should only be creating a list of tasks that the user can do to achieve their goals. Consider the users needs and goals when creating this list."
     return prompt
 
 
@@ -275,7 +276,7 @@ def send_to_google_calander():
     # Load the OAuth credentials JSON
     SCOPES = ["https://www.googleapis.com/auth/calendar"]
     credentials = service_account.Credentials.from_service_account_file(
-        'balmy-parser-441323-n2-f5a5089d889d.json', scopes=SCOPES
+        'balmy-parser-441323-n2-6989808f91d0.json', scopes=SCOPES
     )
 
     # Initialize the Calendar API

@@ -4,21 +4,19 @@ const chatInput = document.getElementById("chat-input");
        const previousChat = document.getElementById("previous-chat");
 
    
+function addAgentMessageToChat(message) {
+    const messageBubble = document.createElement("div");
+    messageBubble.classList.add("mb-2", "text-left");
 
-       function addAgentMessageToChat(message){
-         const messageBubble = document.createElement("div");
-           messageBubble.classList.add("mb-2", "text-right");
+    const bubbleContent = document.createElement("div");
+    bubbleContent.classList.add("bg-green-100", "text-blue-800", "p-2", "rounded-lg", "w-max", "max-w-xs");
+    bubbleContent.textContent = message;
 
-           const bubbleContent = document.createElement("div");
-           bubbleContent.classList.add("bg-green-100", "text-blue-800", "p-2", "rounded-lg", "w-max", "max-w-xs", "ml-auto");
-           bubbleContent.textContent = message;
+    messageBubble.appendChild(bubbleContent);
+    previousChat.appendChild(messageBubble);
 
-           messageBubble.appendChild(bubbleContent);
-           previousChat.appendChild(messageBubble);
-
-           
-           previousChat.scrollTop = previousChat.scrollHeight; //Ensure scrolled to top of conversation.
-       }
+    previousChat.scrollTop = previousChat.scrollHeight; // Ensure scrolled to top of conversation.
+}
 
        // Event listener for the Enter key
        chatInput.addEventListener("keypress", (event) => {
@@ -138,6 +136,8 @@ function getTasks() {
     .then(data => {
         if (data.status === 'success') {
             console.log('OpenAI response:', data.response);
+            alert("Sent to your google calendar");
+
         } else {
             console.error('Error from OpenAI API:', data.message);
         }

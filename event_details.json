@@ -1,118 +1,92 @@
 [
     {
-        "summary": "Morning Fitness Training",
-        "location": "Local Gym",
-        "description": "Cardio and strength training to build endurance and muscle strength.",
+        "summary": "Research Construction Basics",
+        "location": "Home",
+        "description": "Study construction fundamentals and techniques.",
         "start": {
-            "dateTime": "2024-11-13T06:00:00-07:00",
+            "dateTime": "2024-11-06T08:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2024-11-13T07:00:00-07:00",
+            "dateTime": "2024-11-06T09:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Ball Control and Dribbling Practice",
-        "location": "Community Football Field",
-        "description": "Focus on improving ball control and dribbling skills through drills.",
-        "start": {
-            "dateTime": "2024-11-13T16:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        },
-        "end": {
-            "dateTime": "2024-11-13T17:30:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        }
-    },
-    {
-        "summary": "Team Strategy Meeting",
+        "summary": "Online Construction Safety Course",
         "location": "Online",
-        "description": "Discuss game strategy and positioning with teammates.",
+        "description": "Complete a safety course to understand site safety protocols.",
         "start": {
-            "dateTime": "2024-11-13T19:00:00-07:00",
+            "dateTime": "2024-11-07T10:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2024-11-13T20:00:00-07:00",
+            "dateTime": "2024-11-07T11:30:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Evening Recovery Session",
+        "summary": "Construction Apprenticeship Search",
         "location": "Home",
-        "description": "Stretching and recovery exercises to prevent injury.",
+        "description": "Research and apply for construction apprenticeships or entry-level jobs.",
         "start": {
-            "dateTime": "2024-11-14T18:00:00-07:00",
+            "dateTime": "2024-11-08T14:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2024-11-14T18:30:00-07:00",
+            "dateTime": "2024-11-08T15:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Technical Drills and Shooting Practice",
-        "location": "Community Football Field",
-        "description": "Practice technical drills focused on passing and shooting accuracy.",
+        "summary": "Visit Construction Sites",
+        "location": "Various Locations",
+        "description": "Visit local construction sites to observe ongoing projects and network with professionals.",
         "start": {
-            "dateTime": "2024-11-14T16:00:00-07:00",
+            "dateTime": "2024-11-09T09:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2024-11-14T17:30:00-07:00",
+            "dateTime": "2024-11-09T11:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Mental Training Session",
+        "summary": "Tool Usage Practice",
+        "location": "Home Workshop",
+        "description": "Practice using basic construction tools.",
+        "start": {
+            "dateTime": "2024-11-10T13:00:00-07:00",
+            "timeZone": "America/Los_Angeles"
+        },
+        "end": {
+            "dateTime": "2024-11-10T14:00:00-07:00",
+            "timeZone": "America/Los_Angeles"
+        }
+    },
+    {
+        "summary": "Construction Technique Video Tutorials",
         "location": "Home",
-        "description": "Mental exercises and visualization techniques to enhance focus on the field.",
+        "description": "Watch video tutorials on advanced construction techniques.",
         "start": {
-            "dateTime": "2024-11-15T19:00:00-07:00",
+            "dateTime": "2024-11-11T16:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2024-11-15T19:30:00-07:00",
+            "dateTime": "2024-11-11T17:30:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Weekend Match Participation",
-        "location": "Local Football Stadium",
-        "description": "Participate in a competitive football match.",
+        "summary": "Networking with Construction Professionals",
+        "location": "Online",
+        "description": "Engage with construction professionals on forums and social media.",
         "start": {
-            "dateTime": "2024-11-16T10:00:00-07:00",
+            "dateTime": "2024-11-12T18:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2024-11-16T12:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        }
-    },
-    {
-        "summary": "Post-Match Analysis",
-        "location": "Home",
-        "description": "Review match performance and identify areas for improvement.",
-        "start": {
-            "dateTime": "2024-11-16T14:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        },
-        "end": {
-            "dateTime": "2024-11-16T15:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        }
-    },
-    {
-        "summary": "Day Off",
-        "location": "Anywhere",
-        "description": "Rest and recover for the week ahead.",
-        "start": {
-            "dateTime": "2024-11-17T00:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        },
-        "end": {
-            "dateTime": "2024-11-17T23:59:59-07:00",
+            "dateTime": "2024-11-12T19:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     }
