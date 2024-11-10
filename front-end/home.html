@@ -3,68 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Application</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
-    
-    <div class="w-full max-w-lg bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-4/5">
-        <!-- Chat History -->
-        <div class="flex-1 p-4 overflow-y-auto" id="chat-history">
-            <!-- Example chat bubbles -->
-            <div class="mb-4">
-                <div class="bg-blue-100 text-blue-800 p-2 rounded-lg w-max max-w-xs">
-                    Hello! How can I help you today?
-                </div>
-            </div>
-            <div class="mb-4 text-right">
-                <div class="bg-green-100 text-green-800 p-2 rounded-lg w-max max-w-xs ml-auto">
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                    Hi! I have a question about Tailwind CSS.
-                </div>
-            </div>
-        </div>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.css" rel="stylesheet">
 </head>
 <!-- header -->
 <body>
-    <nav class="fixed top-0 left-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 ">
-        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+    <nav class="fixed top-0 left-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="px-3 py-2 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
               <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
@@ -80,7 +26,7 @@
               </button>
               <!-- aspire ai logo clickable -->
               <a href="" class="flex ms-2 md:me-24">
-                <img src="../images/logo.jpeg" class="h-8 me-3" alt="MUTS Logo" />
+                <img src="../images/logo.jpeg" class="h-8 me-3" alt="Company Logo" />
                 <span id="title-texts"
                   class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">AspireAI</span>
                 <span id="alt-title-texts"
@@ -160,18 +106,9 @@
       </nav>
     
     <!-- Chatbox -->
-    <div class="p-4 border-t">
-        <div class="flex">
-            <input id="chat-input" type="text" placeholder="Type your message..." 
-                    class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <button id="send-button" class="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600 focus:outline-none">
-                Send
-            </button>
-            </div>
-        </div>
-    </div>
+ 
 
-    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+    <!-- <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
            <ul class="space-y-2 font-medium">
               <li>
@@ -324,15 +261,8 @@
            </ul>
         </div>
      </aside>
-
-     <div class="fixed bottom-8">
-        <div class="flex">
-            <!-- Modal toggle -->
-            <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-            Generate story
-            </button>
-        </div>
-    </div>
+         
+    </div> -->
 
     <!-- Main modal -->
 <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -368,6 +298,75 @@
         </div>
     </div>
 </div>
+<body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
+   <div class="w-full max-w-lg bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-4/5">
+       <!-- Chat History -->
+       <div class="flex-1 p-4 overflow-y-auto" id="previous-chat">
+           <!-- Existing chat bubbles (initial messages can go here) -->
+           <div class="mb-4">
+               <div class="bg-blue-100 text-blue-800 p-2 rounded-lg w-max max-w-xs">
+                   Welcome to AspireAI! To get started, tell me about your dream goals.
+               </div>
+           </div>
+       </div>
+
+       <!-- Chat Input -->
+       <div class="p-4 border-t">
+           <div class="flex">
+               <textarea id="chat-input" type="text" placeholder="Type your message..." rows = 3 class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+               <button id="send-button"
+                   class="bg-blue-500 text-white px-5 py-2 rounded-r-lg hover:bg-blue-600 focus:outline-none">
+                   Send
+               </button>
+               <button id="send-button"
+                   class="ml-4 p-4 bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800  focus:outline-none">
+                   Begin your Story
+               </button>
+           </div>
+       </div>
+   </div>
+
+   <script>
+       const chatInput = document.getElementById("chat-input");
+       const sendButton = document.getElementById("send-button");
+       const previousChat = document.getElementById("previous-chat");
+
+   
+       function addMessageToChat(message) {
+           const messageBubble = document.createElement("div");
+           messageBubble.classList.add("mb-2", "text-right");
+
+           const bubbleContent = document.createElement("div");
+           bubbleContent.classList.add("bg-green-100", "text-green-800", "p-2", "rounded-lg", "w-max", "max-w-xs", "ml-auto");
+           bubbleContent.textContent = message;
+
+           messageBubble.appendChild(bubbleContent);
+           previousChat.appendChild(messageBubble);
+
+           
+           previousChat.scrollTop = previousChat.scrollHeight; //Ensure scrolled to top of conversation.
+       }
+
+      
+       sendButton.addEventListener("click", () => {
+           const message = chatInput.value.trim();
+           if (message) {
+               addMessageToChat(message);
+               chatInput.value = ""; 
+           }
+       });
+
+       // Event listener for the Enter key
+       chatInput.addEventListener("keypress", (event) => {
+           if (event.key === "Enter") {
+               const message = chatInput.value.trim();
+               if (message) {
+                   addMessageToChat(message);
+                   chatInput.value = ""; // Clear input after sending
+               }
+           }
+       });
+   </script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.js"></script>
 
 
