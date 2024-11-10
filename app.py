@@ -11,6 +11,9 @@ import os
 from swarm import Swarm, Agent
 from flask import Blueprint, request, jsonify
 from dotenv import load_dotenv
+import json
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
 
 # Load environment variables from .env file if you're using one
 load_dotenv()
@@ -183,18 +186,47 @@ def call_task_agent_api():
         response = client.run(
             agent=task_agent,
             messages=[{"role": "user", "content": "Create a weekly schedule of tasks to complete these goals. Do not ask for any more information."}],
-            context_variables={"previous_conversation": previous_conversation_to_string(), "first_name": first_name, "last_name": last_name, "gender":gender, "age": age, "country": country, "occupation": occupation, "emplyoment type": employmentType, "story_text": story_text}
+            context_variables={"previous_conversation": previous_conversation_to_string(), "first_name": first_name, "last_name": last_name, "gender":gender, "age": age, "country": country, "occupation": occupation, "employmentType": employmentType, "story_text": story_text}
         )
 
         result_text = response.messages[-1]["content"]
+
+        print(result_text)
+        # Remove the ```json and ``` from result_text
+        result_text = result_text.strip("```json").strip("```")
+        # Parse the result_text as JSON
+        parsed_result = json.loads(result_text)
+
+        print(parsed_result)
+
+        # Write the parsed_result to a JSON file
+        with open('event_details.json', 'w') as json_file:
+            json.dump(parsed_result, json_file, indent=4)
+
+        send_to_google_calander()
      
         return jsonify({"status": "success", "response": result_text})
     except Exception as e:
         print(e)
         return jsonify({"status": "error", "message": str(e)})
 
+def send_to_google_calander():
+    # Load the OAuth credentials JSON
+    SCOPES = ["https://www.googleapis.com/auth/calendar"]
+    credentials = service_account.Credentials.from_service_account_file(
+        'balmy-parser-441323-n2-f5a5089d889d.json', scopes=SCOPES
+    )
 
+    # Initialize the Calendar API
+    service = build("calendar", "v3", credentials=credentials)
 
+    calendar_id = "dominic.hill.eng@gmail.com"
+    with open('event_details.json', 'r') as file:
+        events = json.load(file)
+
+    for event in events:
+        event_result = service.events().insert(calendarId=calendar_id, body=event).execute()
+        print(f"Event created: {event_result.get('htmlLink')}")
 
 
 

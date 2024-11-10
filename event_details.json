@@ -1,0 +1,158 @@
+[
+    {
+        "summary": "Morning Martial Arts Training",
+        "location": "Local Gym",
+        "description": "Practice agility, stealth, and martial arts maneuvers.",
+        "start": {
+            "dateTime": "2024-11-10T06:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-10T07:30:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Self-Defense Class",
+        "location": "Community Center",
+        "description": "Teach a group of students the art of self-defense.",
+        "start": {
+            "dateTime": "2024-11-10T18:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-10T19:30:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Security Consulting Session",
+        "location": "Online",
+        "description": "Consult for a security firm, providing ninja-based insights.",
+        "start": {
+            "dateTime": "2024-11-11T10:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-11T11:00:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Study Ancient Ninja Texts",
+        "location": "Home Library",
+        "description": "Gain knowledge on historical techniques and strategies.",
+        "start": {
+            "dateTime": "2024-11-11T20:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-11T21:00:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Meditation by the Pond",
+        "location": "Backyard Garden",
+        "description": "Meditate to enhance mental resilience and focus.",
+        "start": {
+            "dateTime": "2024-11-12T07:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-12T07:30:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Evening Run for Endurance",
+        "location": "Local Park",
+        "description": "Build endurance and stamina through running.",
+        "start": {
+            "dateTime": "2024-11-12T18:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-12T19:00:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Personal Technique Practice",
+        "location": "Home Training Room",
+        "description": "Focus on refining personal martial arts techniques.",
+        "start": {
+            "dateTime": "2024-11-13T06:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-13T07:00:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Strategic Theta Workshop",
+        "location": "Community Hall",
+        "description": "Participate and teach a workshop on strategic thinking.",
+        "start": {
+            "dateTime": "2024-11-13T17:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-13T18:30:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Restorative Yoga Session",
+        "location": "Local Yoga Studio",
+        "description": "Attend a restorative yoga class for flexibility and recovery.",
+        "start": {
+            "dateTime": "2024-11-14T08:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-14T09:00:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Online Security System Research",
+        "location": "Home Office",
+        "description": "Research latest security systems online.",
+        "start": {
+            "dateTime": "2024-11-15T10:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-15T11:00:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Community Demonstration",
+        "location": "Local High School",
+        "description": "Demonstrate ninja skills to inspire local youth.",
+        "start": {
+            "dateTime": "2024-11-15T15:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-15T16:00:00Z",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Free Day - Flexible Activity",
+        "location": "Anywhere",
+        "description": "Time set aside for personal development or rest.",
+        "start": {
+            "dateTime": "2024-11-16T12:00:00Z",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-16T20:00:00Z",
+            "timeZone": "Europe/London"
+        }
+    }
+]
