@@ -8,9 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.css" rel="stylesheet">
 </head>
 <!-- header -->
-<body>
+<body class="bg-gray-100 h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-100 via-purple-200 to-purple-300"></body>
     <nav class="fixed top-0 left-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <div class="px-3 py-2 lg:px-5 lg:pl-3">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
               <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
@@ -25,32 +25,33 @@
                 </svg>
               </button>
               <!-- aspire ai logo clickable -->
-              <a href="" class="flex ms-2 md:me-24">
-                <img src="../images/logo.jpeg" class="h-8 me-3" alt="Company Logo" />
+              <a href="#" class="flex ms-2 md:me-24 text-blue:800">
+                <img src="../images/logo.jpeg" class="h-10 me-3" alt="Company Logo" />
                 <span id="title-texts"
-                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">AspireAI</span>
-                <span id="alt-title-texts"
-                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
+                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap">AspireAI</span>
+                <!-- <span id="alt-title-texts"
+                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-blue:800"></span> -->
               </a>
             </div>
             
             
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul class="font-medium flex flex-row mr-20 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 -ml-2">
                 <li>
-                <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+                <a href = "#" onlick = "openMission()" data-modal-target="missionForm" data-modal-toggle="missionForm" class="block  py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Our Mission</a>
                 </li>
                 <li>
-                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                <a href="#" class="block text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">The Team</a>
                 </li>
                 <li>
-                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pipeline</a>
                 </li>
                 <li>
                 <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
                 </li>
                 <li>
-                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-                </li>
+                  <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                  </li>
+                
             </ul>
               
             <div class="flex items-center">
@@ -70,27 +71,26 @@
                   </button>
                 </div>
                 <div
-                  class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                  class="ml-4 z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
                   id="dropdown-user">
-                  <div class="px-4 py-3" role="none">
+                  <div class="px-5 py-3" role="none">
                     <p class="text-sm text-gray-900 dark:text-white" role="none">
                     </p>
                     <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
                     
                     </p>
                   </div>
-                  <ul class="py-1" role="none">
+                  <ul class="py-1 ml-4" role="none">
     
                     <li>
-                      <a href="#" onclick="openProfile()"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                      <a href="#" 
+                        class="block ml-4 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                         role="menuitem" data-modal-target="profileForm" data-modal-toggle="profileForm">Import</a>
                     </li>
                     <li>
-                      <a href="#" onclick="openSubscribe()"
+                      <a href="#" 
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                        role="menuitem" data-modal-target="calendar-modal1"
-                        data-modal-toggle="calendar-modal1">Subscribe</a>
+                        role="menuitem" >Subscribe</a>
                     </li>
                     <li>
                       <a href="callback.php?logout"
@@ -264,42 +264,76 @@
          
     </div> -->
 
-    <!-- Main modal -->
-<div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative p-4 w-full max-w-2xl max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <!-- Modal header -->
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Terms of Service
-                </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
-            </div>
-            <!-- Modal body -->
-            <div class="p-4 md:p-5 space-y-4">
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                </p>
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                </p>
-            </div>
-            <!-- Modal footer -->
-            <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                <button data-modal-hide="default-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
-            </div>
+    <!-- About Us modal -->
+    <div id="missionForm" style="left:40%;  top:20%;" tabindex="-1" aria-hidden="true"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+
+    <div class="relative p-4 w-full max-w-md max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header-->
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            Subscribe to Calendar
+          </h3>
+
+          <button type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-toggle="missionForm" onclick="closeMission()">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+
+            <span class="sr-only">Close modal</span>
+          </button>
         </div>
+    <div class="p-4 md:p-5">
+
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Connect using Apple, Google or using our
+        custom link</p>
+      <ul class="my-4 space-y-3">
+        <li>
+          <a href=""
+            class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="0.82em" height="1em" viewBox="0 0 256 315">
+              <path
+                d="M213.803 167.03c.442 47.58 41.74 63.413 42.197 63.615c-.35 1.116-6.599 22.563-21.757 44.716c-13.104 19.153-26.705 38.235-48.13 38.63c-21.05.388-27.82-12.483-51.888-12.483c-24.061 0-31.582 12.088-51.51 12.871c-20.68.783-36.428-20.71-49.64-39.793c-27-39.033-47.633-110.3-19.928-158.406c13.763-23.89 38.36-39.017 65.056-39.405c20.307-.387 39.475 13.662 51.889 13.662c12.406 0 35.699-16.895 60.186-14.414c10.25.427 39.026 4.14 57.503 31.186c-1.49.923-34.335 20.044-33.978 59.822M174.24 50.199c10.98-13.29 18.369-31.79 16.353-50.199c-15.826.636-34.962 10.546-46.314 23.828c-10.173 11.763-19.082 30.589-16.678 48.633c17.64 1.365 35.66-8.964 46.64-22.262" />
+            </svg>
+            <span class="flex-1 ms-3 whitespace-nowrap">Apple Calendar</span>
+
+          </a>
+        </li>
+        <li>
+          <a href="https://calendar.google.com/calendar/u/0/r?cid=http://odysseas.work/muts/calendar.php?token=<?php echo $calendarToken ?>"
+            class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+              <path fill="#fff" d="M195.368 60.632H60.632v134.736h134.736z" />
+              <path fill="#ea4335" d="M195.368 256L256 195.368l-30.316-5.172l-30.316 5.172l-5.533 27.73z" />
+              <path fill="#188038"
+                d="M0 195.368v40.421C0 246.956 9.044 256 20.21 256h40.422l6.225-30.316l-6.225-30.316l-33.033-5.172z" />
+              <path fill="#1967d2"
+                d="M256 60.632V20.21C256 9.044 246.956 0 235.79 0h-40.422c-3.688 15.036-5.533 26.101-5.533 33.196c0 7.094 1.845 16.24 5.533 27.436c13.41 3.84 23.515 5.76 30.316 5.76c6.801 0 16.906-1.92 30.316-5.76" />
+              <path fill="#fbbc04" d="M256 60.632h-60.632v134.736H256z" />
+              <path fill="#34a853" d="M195.368 195.368H60.632V256h134.736z" />
+              <path fill="#4285f4" d="M195.368 0H20.211C9.044 0 0 9.044 0 20.21v175.158h60.632V60.632h134.736z" />
+              <path fill="#4285f4"
+                d="M88.27 165.154c-5.036-3.402-8.523-8.37-10.426-14.94l11.689-4.816c1.06 4.042 2.913 7.175 5.558 9.398c2.627 2.223 5.827 3.318 9.566 3.318c3.823 0 7.107-1.162 9.852-3.487c2.746-2.324 4.127-5.288 4.127-8.875c0-3.672-1.449-6.67-4.345-8.994c-2.897-2.324-6.535-3.486-10.88-3.486h-6.754v-11.57h6.063c3.739 0 6.888-1.011 9.448-3.033c2.56-2.02 3.84-4.783 3.84-8.303c0-3.132-1.145-5.625-3.435-7.494c-2.29-1.87-5.188-2.813-8.708-2.813c-3.436 0-6.164.91-8.185 2.745a16.115 16.115 0 0 0-4.413 6.754l-11.57-4.817c1.532-4.345 4.345-8.185 8.471-11.503c4.127-3.318 9.398-4.985 15.798-4.985c4.733 0 8.994.91 12.767 2.745c3.772 1.836 6.736 4.379 8.875 7.613c2.14 3.25 3.2 6.888 3.2 10.93c0 4.126-.993 7.613-2.98 10.476c-1.988 2.863-4.43 5.052-7.327 6.585v.69a22.248 22.248 0 0 1 9.398 7.327c2.442 3.284 3.672 7.208 3.672 11.79c0 4.58-1.163 8.673-3.487 12.26c-2.324 3.588-5.54 6.417-9.617 8.472c-4.092 2.055-8.69 3.1-13.793 3.1c-5.912.016-11.369-1.685-16.405-5.087m71.797-58.005l-12.833 9.28l-6.417-9.734l23.023-16.607h8.825v78.333h-12.598z" />
+            </svg>
+            <span class="flex-1 ms-3 whitespace-nowrap">Google Calendar</span>
+          </a>
+        </li>
+
+      </ul>
+      <div>
+        <span class="inline-flex items-center text-xs font-normal text-gray-500 ">
+      </div>
     </div>
+  </div>
 </div>
-<body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
-   <div class="w-full max-w-lg bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-4/5">
+</div>
+
+   <div class="w-full max-w-lg bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-3/4">
        <!-- Chat History -->
        <div class="flex-1 p-4 overflow-y-auto" id="previous-chat">
            <!-- Existing chat bubbles (initial messages can go here) -->
@@ -313,18 +347,19 @@
        <!-- Chat Input -->
        <div class="p-4 border-t">
            <div class="flex">
-               <textarea id="chat-input" type="text" placeholder="Type your message..." rows = 3 class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+               <textarea id="chat-input" type="text" placeholder="Type your message..." rows = 3 class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-0 focus:ring-blue-500"></textarea>
                <button id="send-button"
                    class="bg-blue-500 text-white px-5 py-2 rounded-r-lg hover:bg-blue-600 focus:outline-none">
                    Send
                </button>
-               <button id="send-button"
+               <button id="story-button"
                    class="ml-4 p-4 bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800  focus:outline-none">
                    Begin your Story
                </button>
            </div>
        </div>
    </div>
+   <!--Pop-Up for About Us-->
 
    <script>
        const chatInput = document.getElementById("chat-input");
@@ -334,10 +369,28 @@
    
        function addMessageToChat(message) {
            const messageBubble = document.createElement("div");
+           
+           messageBubble.classList.add("flex-1" ,"p-2" ,"overflow-y-auto");
+
+
+           const bubbleContent = document.createElement("div");
+           
+           bubbleContent.classList.add("bg-green-100", "text-green-800","p-3", "rounded-lg", "w-max", "max-w-xs","mb-1", "ml-auto");
+           bubbleContent.textContent = message;
+
+           messageBubble.appendChild(bubbleContent);
+           
+           previousChat.appendChild(messageBubble);
+
+           
+           previousChat.scrollTop = previousChat.scrollHeight; //Ensure scrolled to top of conversation.
+       }
+       function addAgentMessageToChat(message){
+         const messageBubble = document.createElement("div");
            messageBubble.classList.add("mb-2", "text-right");
 
            const bubbleContent = document.createElement("div");
-           bubbleContent.classList.add("bg-green-100", "text-green-800", "p-2", "rounded-lg", "w-max", "max-w-xs", "ml-auto");
+           bubbleContent.classList.add("bg-green-100", "text-blue-800", "p-2", "rounded-lg", "w-max", "max-w-xs", "ml-auto");
            bubbleContent.textContent = message;
 
            messageBubble.appendChild(bubbleContent);
@@ -363,9 +416,21 @@
                if (message) {
                    addMessageToChat(message);
                    chatInput.value = ""; // Clear input after sending
+                   event.preventDefault();
+               
                }
            }
        });
+     
+    function openMission() {
+      document.getElementById("missionForm").style.display = "block";
+
+    }
+    function closeMission() {
+      document.getElementById("missionForm").style.display = "none";
+
+    }
+       
    </script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.js"></script>
 
