@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AspireAI</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo-no-bg.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.css" rel="stylesheet">
 </head>
 <!-- header -->
-<body class="bg-gray-100 h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-100 via-purple-200 to-purple-300"></body>
+<body class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-100 via-purple-200 to-purple-300"></body>
     <nav class="fixed top-0 left-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
@@ -28,7 +29,7 @@
               <a href="#" class="flex ms-2 md:me-24 text-blue:800">
                 <img src="../images/logo.jpeg" class="h-10 me-3" alt="Company Logo" />
                 <span id="title-texts"
-                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap">AspireAI</span>
+                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-purple-500"><b>AspireAI</b></span>
                 <!-- <span id="alt-title-texts"
                   class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-blue:800"></span> -->
               </a>
@@ -373,9 +374,9 @@
        <!-- Chat History -->
        <div class="flex-1 p-4 overflow-y-auto" id="previous-chat">
            <!-- Existing chat bubbles (initial messages can go here) -->
-           <div class="mb-4">
+           <div class="mb-0">
                <div class="bg-blue-100 text-blue-800 p-2 rounded-lg w-max max-w-xs">
-                   Welcome to AspireAI! To get started, tell me about your dream goals.
+                   Welcome to <b class ="text-purple-500">AspireAI</b>! To get started, tell me about your dream goals.
                </div>
            </div>
        </div>
@@ -394,7 +395,14 @@
        <p id="story-button"
        class="ml-4 p-4 text-blue-500 text-center p-2 rounded-lg  focus:outline-none hover:underline">
        <a href="#" onclick = "openStory()" data-modal-target="storyModal" data-modal-toggle="storyModal">Finished? Begin your story!</a>
-</p>
+</p>  
+<div style = "margin-bottom:3; padding-bottom: 5%;">
+   
+       
+
+   <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">Privacy Policy</a>. All Rights Reserved.</span>
+
+</divdiv>
    </div>
    <!--Pop-Up for About Us-->
 
@@ -490,4 +498,5 @@
 
 
 </body>
+
 </html>
