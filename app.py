@@ -1,19 +1,80 @@
 from flask import Flask, render_template
 # from api.openai_api import openai_blueprint
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # # Register the OpenAI API blueprint
 # app.register_blueprint(openai_blueprint)
 
 
-import os
+from os import environ as env 
 from swarm import Swarm, Agent
-from flask import Blueprint, request, jsonify
-from dotenv import load_dotenv
+from flask import Blueprint, request, jsonify, redirect, render_template, session, url_for
+from dotenv import load_dotenv, find_dotenv
 import json
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
+from urllib.parse import quote_plus, urlencode
+from authlib.integrations.flask_client import OAuth
+
+app.secret_key = env.get("APP_SECRET_KEY")
+
+oauth = OAuth(app)
+oauth.register(
+    "auth0",
+    client_id=env.get("AUTH0_CLIENT_ID"),
+    client_secret=env.get("AUTH0_CLIENT_SECRET"),
+    client_kwargs={
+        "scope": "openid profile email",
+    },
+    server_metadata_url=f'https://{env.get("AUTH0_DOMAIN")}/.well-known/openid-configuration'
+)
+
+# \\\\\\\\\\\\\\\\\\\\\ Auth0 login ///////////////////////// 
+
+@app.route("/login")
+def login():
+    print("login")
+    return oauth.auth0.authorize_redirect(
+        redirect_uri=url_for("callback", _external=True)
+    )
+
+
+@app.route("/callback", methods=["GET", "POST"])
+def callback():
+    token = oauth.auth0.authorize_access_token()
+    session["user"] = token
+    return redirect(url_for("dashboard"))
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(
+        "https://" + env.get("AUTH0_DOMAIN")
+        + "/v2/logout?"
+        + urlencode(
+            {
+                "returnTo": url_for("home", _external=True),
+                "client_id": env.get("AUTH0_CLIENT_ID"),
+            },
+            quote_via=quote_plus,
+        )
+    )
+
+@app.route("/home")
+def dashboard():
+    if "user" not in session:
+        print("user not in session")
+        return redirect(url_for("index.html"))
+    return render_template("home.html", session=session.get('user'), pretty=json.dumps(session.get('user'), indent=4))
+
+
+# \\\\\\\\\\\\\\\\\\\\\ Auth0 login  end /////////////////////////
+
+
+
+
+
 
 # Load environment variables from .env file if you're using one
 load_dotenv()
@@ -235,5 +296,5 @@ def send_to_google_calander():
 # Run the app
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=env.get("PORT", 5000))
 

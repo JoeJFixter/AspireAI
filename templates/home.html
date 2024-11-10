@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AspireAI</title>
+    <link rel="icon" type="image/x-icon" href="logo-no-bg.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.css" rel="stylesheet">
+</head>
+<!-- header -->
+<body class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-100 via-purple-200 to-purple-300"></body>
+    <nav class="fixed top-0 left-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start rtl:justify-end">
+              <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+                type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open sidebar</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                  </path>
+                </svg>
+              </button>
+              <!-- aspire ai logo clickable -->
+              <a href="#" class="flex ms-2 md:me-24 text-blue:800">
+                <img src="{{ url_for('static', filename='logo.jpeg')}}" class="h-10 me-3" alt="Company Logo" />
+                <span id="title-texts"
+                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-purple-500"><b>AspireAI</b></span>
+                <!-- <span id="alt-title-texts"
+                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-blue:800"></span> -->
+              </a>
+            </div>
+            
+            
+            <ul class="font-medium flex flex-row mr-20 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 -ml-2">
+                <li>
+                <a href = "#" onclick = "openMission()" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our Mission</a>
+                </li>
+                <!-- <li>
+                <a href="#" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">The Team</a>
+                </li> -->
+                <li>
+                <a href="#" onclick = "openPipeline()" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">The Aspire Pipeline</a>
+                </li>
+                <!-- <li>
+                <a href="#" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                </li> -->
+                <li>
+                  <a href="https://github.com/JoeJFixter/AspireAI/issues" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Report Issues</a>
+                  </li>
+                
+            </ul>
+              
+            <div class="flex items-center">
+              <div class="flex items-center ms-3">
+                <div>
+                  <button type="button"
+                    class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                    <span class="sr-only">Open user menu</span>
+                    <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                      <svg class="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="ml-4 z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                  id="dropdown-user">
+                  
+                  <ul class="py-1 ml-2" role="none">
+   
+                    <li>
+                      <a href="callback.php?logout"
+                        class="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem">Sign out</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <!-- Chatbox -->
+ 
+
+    <!-- <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+           <ul class="space-y-2 font-medium">
+              <li>
+                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    
+                    <span class="ms-3">Chat1</span>
+                 </a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    
+                    <span class="flex-1 ms-3 whitespace-nowrap">Chat2</span>
+                    
+                 </a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    
+                    <span class="flex-1 ms-3 whitespace-nowrap">Chat3</span>
+                    
+                 </a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    
+                    <span class="flex-1 ms-3 whitespace-nowrap">Chat4</span>
+                 </a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    
+                    <span class="flex-1 ms-3 whitespace-nowrap">Chat5</span>
+                 </a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    
+                    <span class="flex-1 ms-3 whitespace-nowrap">Chat6</span>
+                 </a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    
+                    <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                 </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                   
+                   <span class="flex-1 ms-3 whitespace-nowrap">Chat7</span>
+                </a>
+             </li>
+             
+           </ul>
+        </div>
+     </aside>
+         
+    </div> -->
+
+   <!-- Pipeline Modal -->
+   <div id="missionForm" style="left:1%;  top:10%;" tabindex="-1" aria-hidden="true"
+   class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)]">
+
+      <div class="relative p-4 w-full max-w-md max-h-full">
+      <!-- Modal content -->
+         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header-->
+         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+               Our Misson
+            </h3>
+
+         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onclick="closeMission()">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+
+            <span class="sr-only">Close modal</span>
+          </button>
+      </div>
+   <div class="p-4 md:p-5">
+
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">Every major accomplishment starts with a <b>dream</b>.</p>
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">At Aspire AI, we believe in the power of dreams to inspire and propel us toward a brighter future. Our mission is to empower individuals to envision and meticulously plan their aspirations with precision and creativity. <br>By providing smart insights, personalized suggestions, and actionable steps, we aim to help you achieve career milestones, personal goals, and a well-organized life. We are committed to being your partner in progress, offering real-time updates and seamless tracking to keep you motivated. Unlock your potential and transform your aspirations into achievements with Aspire AI.<br> Together, we turn dreams into reality.</p>
+      </ul>
+      <div>
+        <span class="inline-flex items-center text-xs font-normal text-gray-500 ">
+      </div>
+    </div>
+  </div>
+</div>
+   </div>
+ 
+   <div id="pipelineModal" style="left:70%;  top:10%;" tabindex="-1" aria-hidden="true"
+   class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)]">
+
+      <div class="relative p-4 w-full max-w-md max-h-full">
+      <!-- Modal content -->
+         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header-->
+         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+               Our Pipeline
+            </h3>
+
+         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onclick="closePipeline()">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+
+            <span class="sr-only">Close modal</span>
+          </button>
+      </div>
+   <div class="p-4 md:p-5">
+
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">To find out how best we can help, we first require your own honest view of what you imagine yourself to be like in the <b>future</b>.</p>
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">Our AI will then ask for further information to better understand your situation. Please bear in mind the more accurate and precise details you give, the more well-fitted our assessment of your situation will be.<br><br> Once you are <b>ready</b>, <i>begin your story</i> and find what a day in the life of your future self looks lile. <br><br>There's even more! Using our calendar options, we can provide you with a calendar to allow you to become your future self, bound by you, abstracting away unnecessary details.</p>
+
+      </ul>
+      <div>
+        <span class="inline-flex items-center text-xs font-normal text-gray-500 ">
+      </div>
+    </div>
+  </div>
+</div>
+   </div>
+
+   <div id="storyModal" style="left:36%;  top:10%;" tabindex="-1" aria-hidden="true"
+   class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)]">
+
+      <div class="relative p-4 w-full max-w-md max-h-full">
+      <!-- Modal content -->
+         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header-->
+         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+               <i>Your Story</i>
+            </h3>
+
+         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="storyModal" onclick="closeStory()">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+
+            <span class="sr-only">Close modal</span>
+          </button>
+      </div>
+   <div class="p-4 md:p-5">
+
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center" id="storyText"></p>
+      <!-- <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">At Aspire AI, we believe in the power of dreams to inspire and propel us toward a brighter future. Our mission is to empower individuals to envision and meticulously plan their aspirations with precision and creativity. <br>By providing smart insights, personalized suggestions, and actionable steps, we aim to help you achieve career milestones, personal goals, and a well-organized life. We are committed to being your partner in progress, offering real-time updates and seamless tracking to keep you motivated. Unlock your potential and transform your aspirations into achievements with Aspire AI.<br> Together, we turn dreams into reality.</p> -->
+         
+
+      </ul>
+      <div>
+        <span class="inline-flex items-center text-xs font-normal text-gray-500 ">
+      </div>
+    </div>
+  </div>
+</div>
+   </div>
+
+   <div class="w-full max-w-lg bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-3/4">
+       <!-- Chat History -->
+       <div class="flex-1 p-4 overflow-y-auto" id="previous-chat">
+           <!-- Existing chat bubbles (initial messages can go here) -->
+           <div class="mb-0">
+               <div class="bg-blue-100 text-blue-800 p-2 rounded-lg w-max max-w-xs">
+                   Welcome to <b class ="text-purple-500">AspireAI</b>! To get started, tell me about your dream goals.
+               </div>
+           </div>
+       </div>
+
+       <!-- Chat Input -->
+       <div class="p-4 border-t">
+           <div class="flex">
+               <textarea id="chat-input" type="text" placeholder="Type your message..." rows = 3 class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-0 focus:ring-blue-500"></textarea>
+               <button id="send-button"
+                   class="bg-blue-500 text-white px-5 py-2 rounded-r-lg hover:bg-blue-600 focus:outline-none">
+                   Send
+               </button>
+              
+           </div>
+       </div>
+       <p id="story-button"
+       class="ml-4 p-4 text-blue-500 text-center p-2 rounded-lg  focus:outline-none hover:underline">
+       <a href="#" onclick = "openStory()" data-modal-target="storyModal" data-modal-toggle="storyModal">Finished? Begin your story!</a>
+</p>  
+<div style = "margin-bottom:3; padding-bottom: 5%;">
+   
+       
+ <!-- <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">Privacy Policy</a>. All Rights Reserved.</span>-->
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> Use Aspire AI at your own risk. The information and suggestions provided by the AI are meant to assist and guide, but ultimate decisions and actions are your responsibility.</span> 
+    http://127.0.0.1:5000
+</divdiv>
+   </div>
+   <!--Pop-Up for About Us-->
+
+   <script src="{{ url_for('static', filename='app.js')}}"></script>
+
+   <script>
+    //    const chatInput = document.getElementById("chat-input");
+    //    const sendButton = document.getElementById("send-button");
+    //    const previousChat = document.getElementById("previous-chat");
+
+   
+    //    function addMessageToChat(message) {
+    //        const messageBubble = document.createElement("div");
+           
+    //        messageBubble.classList.add("flex-1" ,"p-2" ,"overflow-y-auto");
+
+
+    //        const bubbleContent = document.createElement("div");
+           
+    //        bubbleContent.classList.add("bg-green-100", "text-green-800","p-3", "rounded-lg", "w-max", "max-w-xs","mb-1", "ml-auto");
+    //        bubbleContent.textContent = message;
+
+    //        messageBubble.appendChild(bubbleContent);
+           
+    //        previousChat.appendChild(messageBubble);
+
+           
+    //        previousChat.scrollTop = previousChat.scrollHeight; //Ensure scrolled to top of conversation.
+
+    //        get_response(message);
+    //    }
+    //    function addAgentMessageToChat(message){
+    //      const messageBubble = document.createElement("div");
+    //        messageBubble.classList.add("mb-2", "text-right");
+
+    //        const bubbleContent = document.createElement("div");
+    //        bubbleContent.classList.add("bg-green-100", "text-blue-800", "p-2", "rounded-lg", "w-max", "max-w-xs", "ml-auto");
+    //        bubbleContent.textContent = message;
+
+    //        messageBubble.appendChild(bubbleContent);
+    //        previousChat.appendChild(messageBubble);
+
+           
+    //        previousChat.scrollTop = previousChat.scrollHeight; //Ensure scrolled to top of conversation.
+    //    }
+
+      
+    //    sendButton.addEventListener("click", () => {
+    //        const message = chatInput.value.trim();
+    //        if (message) {
+    //            addMessageToChat(message);
+    //            chatInput.value = ""; 
+    //        }
+    //    });
+
+    //    // Event listener for the Enter key
+    //    chatInput.addEventListener("keypress", (event) => {
+    //        if (event.key === "Enter") {
+    //            const message = chatInput.value.trim();
+    //            if (message) {
+    //                addMessageToChat(message);
+    //                chatInput.value = ""; // Clear input after sending
+    //                event.preventDefault();
+               
+    //            }
+    //        }
+    //    });
+     
+    // function openMission() {
+    //   document.getElementById("missionForm").style.display = "block";
+
+    // }
+    // function closeMission() {
+    //   document.getElementById("missionForm").style.display = "none";
+
+    // }
+       
+    // function openPipeline() {
+    //   document.getElementById("pipelineModal").style.display = "block";
+
+    // }
+    // function closePipeline() {
+    //   document.getElementById("pipelineModal").style.display = "none";
+
+    // }
+    // function openStory() {
+    //   document.getElementById("storyModal").style.display = "block";
+
+    // }
+    // function closeStory() {
+    //   document.getElementById("storyModal").style.display = "none";
+
+    // }
+   </script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.js"></script>
+
+
+
+</body>
+
+</html>
