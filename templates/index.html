@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI Query Form</title>
+    <title>AspireAI</title>
     
 </head>
 <body>
-    <h1>Ask OpenAI a Question</h1>
+    <h1>AspireAI</h1>
     
     <form id="BasicInfo" method="post">
         <label for="firstName">First Name:</label>
@@ -24,6 +24,17 @@
 
         <label for="country">Country:</label>
         <input type="text" id="country" name="country" required><br>
+
+        <label for="Occupation">Occupation:</label>
+        <input type="text" id="Occupation" name="Occupation" required><br>
+
+        <label for="employmentType">Employment Type:</label>
+        <select id="employmentType" name="employmentType" required>
+            <option value="fullTime">Full Time</option>
+            <option value="partTime">Part Time</option>
+            <option value="zeroHour">Zero Hour</option>
+            <option value="na">N/A</option>
+        </select><br>
 
         <button type="submit">Submit</button>
     </form>
@@ -46,6 +57,16 @@
         <button type="submit">See your future</button>
     </form>
     
+    <br>
+    <br>
+
+    <!-- Form to take user input -->
+    <form id="tasksForm">
+        <button type="submit">Create your future</button>
+    </form>
+
+
+
     <!-- Display the response from OpenAI -->
     <div id="responseOutput"></div>
 

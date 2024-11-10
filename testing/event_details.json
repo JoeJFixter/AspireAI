@@ -1,0 +1,106 @@
+[
+    {
+        "summary": "Morning Run",
+        "location": "Local Park",
+        "description": "Start the day with a refreshing morning run to build stamina.",
+        "start": {
+            "dateTime": "2024-11-06T06:30:00-00:00",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-06T07:00:00-00:00",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Technical Skills Training - Midfield Focus",
+        "location": "Football Ground",
+        "description": "Work on dribbling, passing, and tactical skills specific to midfield position.",
+        "start": {
+            "dateTime": "2024-11-06T17:00:00-00:00",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-06T19:00:00-00:00",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Strength Conditioning",
+        "location": "Gym",
+        "description": "Engage in a strength training session to build core power.",
+        "start": {
+            "dateTime": "2024-11-07T18:00:00-00:00",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-07T19:30:00-00:00",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Team Practice",
+        "location": "Football Ground",
+        "description": "Participate in team practice to enhance team coordination and strategy.",
+        "start": {
+            "dateTime": "2024-11-08T17:00:00-00:00",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-08T19:00:00-00:00",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Game Review and Analysis",
+        "location": "Home",
+        "description": "Review past games and analyze performance to identify areas for improvement.",
+        "start": {
+            "dateTime": "2024-11-09T10:00:00-00:00",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-09T11:30:00-00:00",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Yoga and Flexibility",
+        "location": "Gym",
+        "description": "Attend a yoga session to improve flexibility and mental focus.",
+        "start": {
+            "dateTime": "2024-11-10T16:00:00-00:00",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-10T17:00:00-00:00",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Community Football Clinic",
+        "location": "Local Community Center",
+        "description": "Volunteer at a football clinic to share skills with young athletes.",
+        "start": {
+            "dateTime": "2024-11-11T09:00:00-00:00",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-11T11:00:00-00:00",
+            "timeZone": "Europe/London"
+        }
+    },
+    {
+        "summary": "Rest and Recovery",
+        "location": "Home",
+        "description": "Take the day to rest, recover, and mentally recharge.",
+        "start": {
+            "dateTime": "2024-11-12T00:00:00-00:00",
+            "timeZone": "Europe/London"
+        },
+        "end": {
+            "dateTime": "2024-11-12T23:59:00-00:00",
+            "timeZone": "Europe/London"
+        }
+    }
+]

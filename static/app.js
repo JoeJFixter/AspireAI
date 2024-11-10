@@ -59,6 +59,26 @@ function store_basic_info(firstName, lastName, gender, age, country) {
     .catch(error => console.error('Error calling backend:', error));
 }
 
+// Function to call the OpenAI API via your Flask backend
+function getTasks() {
+    fetch('http://127.0.0.1:5000/api/task_agent_api', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({})
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            console.log('OpenAI response:', data.response);
+        } else {
+            console.error('Error from OpenAI API:', data.message);
+        }
+    })
+    .catch(error => console.error('Error calling backend:', error));
+}
+
 // Ensure the DOM is fully loaded before adding the event listener
 document.addEventListener('DOMContentLoaded', function() {
     // console.log("Loaded page");
@@ -71,7 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const gender = document.getElementById("gender").value;
         const age = document.getElementById("age").value;
         const country = document.getElementById("country").value;
-        store_basic_info(firstName, lastName, gender, age, country);
+        const occupation = document.getElementById("Occupation").value;
+        const employmentType = document.getElementById("employmentType").value;
+        store_basic_info(firstName, lastName, gender, age, country, occupation, employmentType);
     });
 
 
@@ -94,5 +116,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Call the function to send the request
         getStory();
+    });
+
+
+    document.getElementById('tasksForm').addEventListener('submit', function(event) {
+        // console.log("submit pressed");
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Call the function to send the request
+        getTasks();
     });
 });
