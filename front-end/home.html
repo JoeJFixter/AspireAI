@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AspireAI</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.css" rel="stylesheet">
 </head>
@@ -37,19 +37,19 @@
             
             <ul class="font-medium flex flex-row mr-20 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 -ml-2">
                 <li>
-                <a href = "#" onlick = "openMission()" data-modal-target="missionForm" data-modal-toggle="missionForm" class="block  py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Our Mission</a>
+                <a href = "#" onclick = "openMission()" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our Mission</a>
                 </li>
+                <!-- <li>
+                <a href="#" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">The Team</a>
+                </li> -->
                 <li>
-                <a href="#" class="block text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">The Team</a>
+                <a href="#" onclick = "openPipeline()" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">The Aspire Pipeline</a>
                 </li>
+                <!-- <li>
+                <a href="#" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                </li> -->
                 <li>
-                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pipeline</a>
-                </li>
-                <li>
-                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                  <a href="https://github.com/JoeJFixter/AspireAI/issues" class="block text-gray-900 text-blue-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Report Issues</a>
                   </li>
                 
             </ul>
@@ -264,65 +264,32 @@
          
     </div> -->
 
-    <!-- About Us modal -->
-    <div id="missionForm" style="left:40%;  top:20%;" tabindex="-1" aria-hidden="true"
-    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+   <!-- Pipeline Modal -->
+   <div id="missionForm" style="left:1%;  top:10%;" tabindex="-1" aria-hidden="true"
+   class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)]">
 
-    <div class="relative p-4 w-full max-w-md max-h-full">
+      <div class="relative p-4 w-full max-w-md max-h-full">
       <!-- Modal content -->
-      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
         <!-- Modal header-->
-        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-            Subscribe to Calendar
-          </h3>
+         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+               Our Misson
+            </h3>
 
-          <button type="button"
-            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-            data-modal-toggle="missionForm" onclick="closeMission()">
+         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onclick="closeMission()">
             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
             </svg>
 
             <span class="sr-only">Close modal</span>
           </button>
-        </div>
-    <div class="p-4 md:p-5">
+      </div>
+   <div class="p-4 md:p-5">
 
-      <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Connect using Apple, Google or using our
-        custom link</p>
-      <ul class="my-4 space-y-3">
-        <li>
-          <a href=""
-            class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="0.82em" height="1em" viewBox="0 0 256 315">
-              <path
-                d="M213.803 167.03c.442 47.58 41.74 63.413 42.197 63.615c-.35 1.116-6.599 22.563-21.757 44.716c-13.104 19.153-26.705 38.235-48.13 38.63c-21.05.388-27.82-12.483-51.888-12.483c-24.061 0-31.582 12.088-51.51 12.871c-20.68.783-36.428-20.71-49.64-39.793c-27-39.033-47.633-110.3-19.928-158.406c13.763-23.89 38.36-39.017 65.056-39.405c20.307-.387 39.475 13.662 51.889 13.662c12.406 0 35.699-16.895 60.186-14.414c10.25.427 39.026 4.14 57.503 31.186c-1.49.923-34.335 20.044-33.978 59.822M174.24 50.199c10.98-13.29 18.369-31.79 16.353-50.199c-15.826.636-34.962 10.546-46.314 23.828c-10.173 11.763-19.082 30.589-16.678 48.633c17.64 1.365 35.66-8.964 46.64-22.262" />
-            </svg>
-            <span class="flex-1 ms-3 whitespace-nowrap">Apple Calendar</span>
-
-          </a>
-        </li>
-        <li>
-          <a href="https://calendar.google.com/calendar/u/0/r?cid=http://odysseas.work/muts/calendar.php?token=<?php echo $calendarToken ?>"
-            class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-              <path fill="#fff" d="M195.368 60.632H60.632v134.736h134.736z" />
-              <path fill="#ea4335" d="M195.368 256L256 195.368l-30.316-5.172l-30.316 5.172l-5.533 27.73z" />
-              <path fill="#188038"
-                d="M0 195.368v40.421C0 246.956 9.044 256 20.21 256h40.422l6.225-30.316l-6.225-30.316l-33.033-5.172z" />
-              <path fill="#1967d2"
-                d="M256 60.632V20.21C256 9.044 246.956 0 235.79 0h-40.422c-3.688 15.036-5.533 26.101-5.533 33.196c0 7.094 1.845 16.24 5.533 27.436c13.41 3.84 23.515 5.76 30.316 5.76c6.801 0 16.906-1.92 30.316-5.76" />
-              <path fill="#fbbc04" d="M256 60.632h-60.632v134.736H256z" />
-              <path fill="#34a853" d="M195.368 195.368H60.632V256h134.736z" />
-              <path fill="#4285f4" d="M195.368 0H20.211C9.044 0 0 9.044 0 20.21v175.158h60.632V60.632h134.736z" />
-              <path fill="#4285f4"
-                d="M88.27 165.154c-5.036-3.402-8.523-8.37-10.426-14.94l11.689-4.816c1.06 4.042 2.913 7.175 5.558 9.398c2.627 2.223 5.827 3.318 9.566 3.318c3.823 0 7.107-1.162 9.852-3.487c2.746-2.324 4.127-5.288 4.127-8.875c0-3.672-1.449-6.67-4.345-8.994c-2.897-2.324-6.535-3.486-10.88-3.486h-6.754v-11.57h6.063c3.739 0 6.888-1.011 9.448-3.033c2.56-2.02 3.84-4.783 3.84-8.303c0-3.132-1.145-5.625-3.435-7.494c-2.29-1.87-5.188-2.813-8.708-2.813c-3.436 0-6.164.91-8.185 2.745a16.115 16.115 0 0 0-4.413 6.754l-11.57-4.817c1.532-4.345 4.345-8.185 8.471-11.503c4.127-3.318 9.398-4.985 15.798-4.985c4.733 0 8.994.91 12.767 2.745c3.772 1.836 6.736 4.379 8.875 7.613c2.14 3.25 3.2 6.888 3.2 10.93c0 4.126-.993 7.613-2.98 10.476c-1.988 2.863-4.43 5.052-7.327 6.585v.69a22.248 22.248 0 0 1 9.398 7.327c2.442 3.284 3.672 7.208 3.672 11.79c0 4.58-1.163 8.673-3.487 12.26c-2.324 3.588-5.54 6.417-9.617 8.472c-4.092 2.055-8.69 3.1-13.793 3.1c-5.912.016-11.369-1.685-16.405-5.087m71.797-58.005l-12.833 9.28l-6.417-9.734l23.023-16.607h8.825v78.333h-12.598z" />
-            </svg>
-            <span class="flex-1 ms-3 whitespace-nowrap">Google Calendar</span>
-          </a>
-        </li>
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">Every major accomplishment starts with a <b>dream</b>.</p>
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">At Aspire AI, we believe in the power of dreams to inspire and propel us toward a brighter future. Our mission is to empower individuals to envision and meticulously plan their aspirations with precision and creativity. <br>By providing smart insights, personalized suggestions, and actionable steps, we aim to help you achieve career milestones, personal goals, and a well-organized life. We are committed to being your partner in progress, offering real-time updates and seamless tracking to keep you motivated. Unlock your potential and transform your aspirations into achievements with Aspire AI.<br> Together, we turn dreams into reality.</p>
+         
 
       </ul>
       <div>
@@ -331,7 +298,76 @@
     </div>
   </div>
 </div>
+   </div>
+ 
+   <div id="pipelineModal" style="left:70%;  top:10%;" tabindex="-1" aria-hidden="true"
+   class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)]">
+
+      <div class="relative p-4 w-full max-w-md max-h-full">
+      <!-- Modal content -->
+         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header-->
+         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+               Our Pipeline
+            </h3>
+
+         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onclick="closePipeline()">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+
+            <span class="sr-only">Close modal</span>
+          </button>
+      </div>
+   <div class="p-4 md:p-5">
+
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">To find out how best we can help, we first require your own honest view of what you imagine yourself to be like in the <b>future</b>.</p>
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">Our AI will then ask for further information to better understand your situation. Please bear in mind the more accurate and precise details you give, the more well-fitted our assessment of your situation will be.<br><br> Once you are <b>ready</b>, <i>begin your story</i> and find what a day in the life of your future self looks lile. <br><br>There's even more! Using our calendar options, we can provide you with a calendar to allow you to become your future self, bound by you, abstracting away unnecessary details.</p>
+
+      </ul>
+      <div>
+        <span class="inline-flex items-center text-xs font-normal text-gray-500 ">
+      </div>
+    </div>
+  </div>
 </div>
+   </div>
+
+   <div id="storyModal" style="left:36%;  top:10%;" tabindex="-1" aria-hidden="true"
+   class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)]">
+
+      <div class="relative p-4 w-full max-w-md max-h-full">
+      <!-- Modal content -->
+         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header-->
+         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+               <i>Your Story</i>
+            </h3>
+
+         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="storyModal" onclick="closeStory()">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+
+            <span class="sr-only">Close modal</span>
+          </button>
+      </div>
+   <div class="p-4 md:p-5">
+
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">Every major accomplishment starts with a <b>dream</b>.</p>
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">At Aspire AI, we believe in the power of dreams to inspire and propel us toward a brighter future. Our mission is to empower individuals to envision and meticulously plan their aspirations with precision and creativity. <br>By providing smart insights, personalized suggestions, and actionable steps, we aim to help you achieve career milestones, personal goals, and a well-organized life. We are committed to being your partner in progress, offering real-time updates and seamless tracking to keep you motivated. Unlock your potential and transform your aspirations into achievements with Aspire AI.<br> Together, we turn dreams into reality.</p>
+         
+
+      </ul>
+      <div>
+        <span class="inline-flex items-center text-xs font-normal text-gray-500 ">
+      </div>
+    </div>
+  </div>
+</div>
+   </div>
 
    <div class="w-full max-w-lg bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-3/4">
        <!-- Chat History -->
@@ -352,12 +388,13 @@
                    class="bg-blue-500 text-white px-5 py-2 rounded-r-lg hover:bg-blue-600 focus:outline-none">
                    Send
                </button>
-               <button id="story-button"
-                   class="ml-4 p-4 bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800  focus:outline-none">
-                   Begin your Story
-               </button>
+              
            </div>
        </div>
+       <p id="story-button"
+       class="ml-4 p-4 text-blue-500 text-center p-2 rounded-lg  focus:outline-none hover:underline">
+       <a href="#" onclick = "openStory()" data-modal-target="storyModal" data-modal-toggle="storyModal">Finished? Begin your story!</a>
+</p>
    </div>
    <!--Pop-Up for About Us-->
 
@@ -431,6 +468,22 @@
 
     }
        
+    function openPipeline() {
+      document.getElementById("pipelineModal").style.display = "block";
+
+    }
+    function closePipeline() {
+      document.getElementById("pipelineModal").style.display = "none";
+
+    }
+    function openStory() {
+      document.getElementById("storyModal").style.display = "block";
+
+    }
+    function closeStory() {
+      document.getElementById("storyModal").style.display = "none";
+
+    }
    </script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@1.3.3/dist/flowbite.min.js"></script>
 
