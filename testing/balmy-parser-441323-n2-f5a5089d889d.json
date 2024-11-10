@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "balmy-parser-441323-n2",
+  "private_key_id": "f5a5089d889de5b88297a78a1f422bb0dcfa4592",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQC+PBWLyO8HOthu\nuokrN0a9V0S4Rvz1k+06MLIxT1ADfGJMCv6CUEFf0Q49vnHjGO85QolMivrKHITH\nhmLxO+D0sHJPwU8IX2DnSmEMWl681xTgUMB0dS2AvdDjA4b8W91Ndt2aAiGovqmf\nVDh/Wu1S6nLYnYgA4pO5ybqjUkmyjMr14HJdwvcQ0bX7LmPjMcySphfzAth+CJ0i\nzEZTyHnchRa38chZzs6leEnayOcHtgAYQEH75pxOc8BlLaAZtmHB+KSMYtNq8d5f\nEZYy6jqz8F6XWYajujzvcGendrJNNpvdajQMKCthLrXxiKVdzci+s1Zf8SzB/xZc\nKA+5EN09AgMBAAECgf9QCXBIIz14xSDGuhCRtnViYSq9rKzqdtixnIigstDOtRIg\n36qNREN6WVWaouRmR0yKNhA1w5n0puUrqEEQCWpheh+wJKPNX0jRPQzlUcmzqAsx\nnW3WDCeUWk+CGmUUrOEptz7kgxTlXoFXehpyxmjpvyvDU1UjfZH3KCptg4rEjWlw\nURQfuAnAFvJ4J2dTFygoG0agALkcLolxMMfBd6+x9/bH10ZR4NPaOFIgR4X9Lm6H\nQUTn4ULReO6vi0W07TtclKaeJORs6gapBja/Xc9lTDFdt0A8hnfSYvQXBfnKscox\nRK1E0jLYV+yl0pdo6EWSx1Atw8+0Y+tBKt/eACECgYEA4j5AMMNNyZhpHc/D3UXt\ncle75wDepxEXoTBRy9Dx754pqPUZN9VVU3s9Dnlw3kQKdJ7kFgKoTLaM5LEmMZW0\nC4nmx/FroqyTPUzg+cCLceVzUD+U1yjBjCgf4CHj8bQ/dXWT/1SDazSUYbFNneTB\nN71OUeCVNS+mbUG89bcZ2R0CgYEA10Fn6IOUwP9KMGMub9n7Sw450LzSMc9aUaCo\nbm/Nv35wUxDU9+C23FeA6SkZqhves1bjSRelK+WqEpJEErBcVR2CK18jK72zKbG3\nwqh6Q96LKBk8BptH09CbThdEHI1c8OUd6ajTs/Qt6YzQbv09oRhF5R99mb5fnUSp\nHFGd+qECgYEAgNyUEzIqjDiTJrfAB7hcllQCYoDMULwbiWPMMxq/souTjviLdJG+\nF96J2ESzVOXMTsBxiVfaJFeVyGxeJL/v3OKe4CNR+0XwV2oCej6BLk5Sb9LHJAXC\nt+HixfaHrpPL0Us3EKdCcz1vhnVGkDhLFURt55TTZ4fMc06OIiY4QsECgYAFExSp\nBZkXJ62PEHeCyYfEEDTKt/jYlcPSUtBFsjsOfaOWQbpTkaed8C4o0QA642dPoQfA\nrF8HduWYhHw4WJIEq6pq7VY97L3xiLAFVcV0HiX3rwicO0LpOmy+3YuMhMShJTWc\nUY+UGXiPnfM3+p5eUt0q9qAWZMeKRJkcAsyPoQKBgC7Btt0PUBfkOlAijNUxV0fE\neJ+TmgptPHcQeHp4hgkjWuVMXoEBSH8+iRf9SecdQYZz5LP6ZlRA7SEuksaSwEJi\nG5w+0njQatoe+QACrnPSReq/z4s2X9d6N2arZpuRsKomIdYHQQ2hJz+DM+8NV+27\nXLSaX7X2jssIntiYeOrw\n-----END PRIVATE KEY-----\n",
+  "client_email": "hackathon@balmy-parser-441323-n2.iam.gserviceaccount.com",
+  "client_id": "113351167052032022218",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hackathon%40balmy-parser-441323-n2.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
