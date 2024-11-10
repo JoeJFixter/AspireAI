@@ -1,157 +1,118 @@
 [
     {
-        "summary": "Cardio Training",
+        "summary": "Morning Fitness Training",
         "location": "Local Gym",
-        "description": "Improve stamina with running and cycling",
+        "description": "Cardio and strength training to build endurance and muscle strength.",
         "start": {
-            "dateTime": "2023-11-06T06:00:00-07:00",
+            "dateTime": "2024-11-13T06:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2023-11-06T07:00:00-07:00",
+            "dateTime": "2024-11-13T07:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Footwork Drills",
-        "location": "Local Park",
-        "description": "Enhance agility and ball control",
+        "summary": "Ball Control and Dribbling Practice",
+        "location": "Community Football Field",
+        "description": "Focus on improving ball control and dribbling skills through drills.",
         "start": {
-            "dateTime": "2023-11-06T17:00:00-07:00",
+            "dateTime": "2024-11-13T16:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2023-11-06T18:00:00-07:00",
+            "dateTime": "2024-11-13T17:30:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Strength Training",
-        "location": "Local Gym",
-        "description": "Build physical strength focusing on core and legs",
+        "summary": "Team Strategy Meeting",
+        "location": "Online",
+        "description": "Discuss game strategy and positioning with teammates.",
         "start": {
-            "dateTime": "2023-11-07T06:00:00-07:00",
+            "dateTime": "2024-11-13T19:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2023-11-07T07:00:00-07:00",
+            "dateTime": "2024-11-13T20:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Team Practice",
-        "location": "Community Field",
-        "description": "Work on team tactics and communication",
-        "start": {
-            "dateTime": "2023-11-07T17:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        },
-        "end": {
-            "dateTime": "2023-11-07T19:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        }
-    },
-    {
-        "summary": "Rest and Recovery",
+        "summary": "Evening Recovery Session",
         "location": "Home",
-        "description": "Focus on stretching and relaxation techniques",
+        "description": "Stretching and recovery exercises to prevent injury.",
         "start": {
-            "dateTime": "2023-11-08T06:00:00-07:00",
+            "dateTime": "2024-11-14T18:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2023-11-08T07:00:00-07:00",
+            "dateTime": "2024-11-14T18:30:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Video Analysis",
+        "summary": "Technical Drills and Shooting Practice",
+        "location": "Community Football Field",
+        "description": "Practice technical drills focused on passing and shooting accuracy.",
+        "start": {
+            "dateTime": "2024-11-14T16:00:00-07:00",
+            "timeZone": "America/Los_Angeles"
+        },
+        "end": {
+            "dateTime": "2024-11-14T17:30:00-07:00",
+            "timeZone": "America/Los_Angeles"
+        }
+    },
+    {
+        "summary": "Mental Training Session",
         "location": "Home",
-        "description": "Review personal gameplay footage for improvement",
+        "description": "Mental exercises and visualization techniques to enhance focus on the field.",
         "start": {
-            "dateTime": "2023-11-08T17:00:00-07:00",
+            "dateTime": "2024-11-15T19:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2023-11-08T18:00:00-07:00",
+            "dateTime": "2024-11-15T19:30:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Cardio Training",
-        "location": "Local Gym",
-        "description": "Improve stamina with running and cycling",
+        "summary": "Weekend Match Participation",
+        "location": "Local Football Stadium",
+        "description": "Participate in a competitive football match.",
         "start": {
-            "dateTime": "2023-11-09T06:00:00-07:00",
+            "dateTime": "2024-11-16T10:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2023-11-09T07:00:00-07:00",
+            "dateTime": "2024-11-16T12:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         }
     },
     {
-        "summary": "Skills Enhancement",
-        "location": "Local Field",
-        "description": "Focus on specific skills like shooting and passing",
-        "start": {
-            "dateTime": "2023-11-09T17:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        },
-        "end": {
-            "dateTime": "2023-11-09T18:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        }
-    },
-    {
-        "summary": "Strength Training",
-        "location": "Local Gym",
-        "description": "Build physical strength focusing on core and legs",
-        "start": {
-            "dateTime": "2023-11-10T06:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        },
-        "end": {
-            "dateTime": "2023-11-10T07:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        }
-    },
-    {
-        "summary": "Team Practice",
-        "location": "Community Field",
-        "description": "Work on team tactics and communication",
-        "start": {
-            "dateTime": "2023-11-10T17:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        },
-        "end": {
-            "dateTime": "2023-11-10T19:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        }
-    },
-    {
-        "summary": "Relaxation Day",
-        "location": "Home or Leisure Spot",
-        "description": "Rest day to allow the body to recover from training",
-        "start": {
-            "dateTime": "2023-11-11T08:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        },
-        "end": {
-            "dateTime": "2023-11-11T12:00:00-07:00",
-            "timeZone": "America/Los_Angeles"
-        }
-    },
-    {
-        "summary": "Tactical Review",
+        "summary": "Post-Match Analysis",
         "location": "Home",
-        "description": "Study and plan tactical plays and strategies",
+        "description": "Review match performance and identify areas for improvement.",
         "start": {
-            "dateTime": "2023-11-12T10:00:00-07:00",
+            "dateTime": "2024-11-16T14:00:00-07:00",
             "timeZone": "America/Los_Angeles"
         },
         "end": {
-            "dateTime": "2023-11-12T11:00:00-07:00",
+            "dateTime": "2024-11-16T15:00:00-07:00",
+            "timeZone": "America/Los_Angeles"
+        }
+    },
+    {
+        "summary": "Day Off",
+        "location": "Anywhere",
+        "description": "Rest and recover for the week ahead.",
+        "start": {
+            "dateTime": "2024-11-17T00:00:00-07:00",
+            "timeZone": "America/Los_Angeles"
+        },
+        "end": {
+            "dateTime": "2024-11-17T23:59:59-07:00",
             "timeZone": "America/Los_Angeles"
         }
     }
